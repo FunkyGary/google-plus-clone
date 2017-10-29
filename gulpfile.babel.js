@@ -44,6 +44,11 @@ gulp.task('lint', () =>
     .pipe($.eslint.format())
     .pipe($.if(!browserSync.active, $.eslint.failAfterError()))
 );
+// depoly github
+gulp.task('deploy', ['default'], () => {
+  return gulp.src('dist/**/*')
+    .pipe($.ghPages());
+});
 
 // Optimize images
 gulp.task('images', () =>

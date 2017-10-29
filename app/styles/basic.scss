@@ -17,15 +17,18 @@ nav {
   height: 100%;
   float: left;
   width: 210px;
+  margin-right:100px;
+  position: fixed;
 }
 main {
   height: 100%;
   float: right;
-  width: calc(100% - 210px);
+  width: calc(100% - 310px);
 }
 .middle-helper {
   height: 100%;
 }
+
 /*HEADER*/
 #google-plus {
   height: 100%;
@@ -34,9 +37,10 @@ main {
     background: #ffffff;
     height: 64px;
     box-shadow: 0 1px 8px rgba(0, 0, 0, .3);
-    position: relative;
     z-index: 1;
     color: #7b7b7b;
+    position: fixed;
+    width: 100%;
     > * {
       display: inline-block;
       vertical-align: middle;
@@ -61,26 +65,50 @@ main {
     h1, h2 {
       margin: 0;
     }
+
     .searchbar {
-      background: #e5e5e5;
       height: 48px;
-      line-height: 48px;
-      width: calc(100% - 380px);
-      border-radius: 4px;
-      font-size: 20px;
-      margin: 0 12px 0 27px;
+      padding-left: 30px;
+      position: relative;
+      width: calc(100% - 450px);
+      padding-right: 10px;
       .fa-search {
-        margin-left: 10px;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        margin-left: 25px;
+      }
+      input{
+        display: inline-block;
+        width: 100%;
+        border: none;
+        background: #e5e5e5;
+        height: 48px;
+        line-height: 48px;
+        border-radius: 4px;
+        font-size: 20px;
+        padding-left: 50px;
+        &::placeholder {
+          color: #C4C4C4;
+          font-size: 18px;
+          font-weight: normal;
+        }
+        &:focus{
+          outline: none;
+        }
       }
     }
-
+    .fa-th-large, .fa-bell-o {
+      margin: 5px;
+    }
     .account {
       background: orange;
       width: 32px;
       height: 32px;
       border-radius: 50%;
       text-align: center;
-
+      margin-right: 20px;
       span {
         color: #ffffff;
         font-size: 20px;
@@ -91,6 +119,7 @@ main {
     }
   }
 }
+
 /*nav*/
 #google-plus {
   .container {
@@ -112,13 +141,67 @@ main {
       height: 20px;
       width: 120px;
       vertical-align: middle;
-      margin-top: 10px;
-      margin-bottom: 10px;
+      margin-top: 15px;
+      margin-bottom: 15px;
     }
     .block:hover {
       width: 100%;
       height: 50px;
       background-color: #D3D3D3;
+    }
+    .line {
+      width: 100%;
+      height: 1px;
+      background-color: rgba(0, 0, 0, .12);
+      margin: 8px 0;
+      display: inline-block;
+    }
+    .no-icon {
+      padding-left: 20px;
+      font-size: 15px;
+      font-weight: normal;
+      color: rgba(0,0,0,0.50);
+    }
+    .footer {
+      bottom: 0px;
+      position: absolute;
+      font-size: 10px;
+      padding: 25px;
+      color: rgba(0,0,0,0.40);
+    }
+  }
+}
+/*main*/
+#google-plus {
+  .container {
+    height: calc(100% - 64px);
+    color: #7b7b7b;
+    .maintop h4 {
+      display: inline-block;
+      margin-right: 20px;
+      font-weight: normal;
+      margin-top: 100px;
+    }
+    .left h4 {
+      float:left;
+    }
+    .right h4 {
+      float:right;
+      color: #4285f4;
+    }
+    .mainbody {
+      display: inline-block;
+      height: 240px;
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
+    .mainpost {
+      display: inline-block;
+      margin-left: 10px;
+      img{
+        vertical-align: top;
+        padding: 5px;
+      }
     }
   }
 }
