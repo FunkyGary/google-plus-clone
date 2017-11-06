@@ -1,5 +1,8 @@
 node_modules
+<<<<<<< HEAD
 .publish
+=======
+>>>>>>> discover
 dist/
 .tmp
 app.yaml
