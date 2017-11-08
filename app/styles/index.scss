@@ -198,6 +198,11 @@ main {
       width: calc(80% - 90px);
       vertical-align: middle;
       margin: 0 auto;
+      position: relative;
+      .inputaccount {
+        position: absolute;
+        margin-top: 9px; 
+      }
       input{
         display: inline-block;
         width: 100%;
